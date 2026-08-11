@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -17,8 +16,8 @@ pipeline {
 
         stage('Package') {
             steps {
-                sh 'echo "Build Number: ${BUILD_NUMBER}" > build-info.txt'
-                sh 'echo "Build executed on $(date)" >> build-info.txt'
+                bat 'echo Build Number: %BUILD_NUMBER% > build-info.txt'
+                bat 'echo Build executed on %DATE% %TIME% >> build-info.txt'
             }
         }
     }
@@ -29,3 +28,5 @@ pipeline {
         }
     }
 }
+
+
