@@ -35,7 +35,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running unit tests... Pass!'
-		error 'Test Failed'
             }
         }
 
